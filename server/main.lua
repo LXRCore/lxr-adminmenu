@@ -1,18 +1,31 @@
+--[[
+    ██╗     ██╗  ██╗██████╗       █████╗ ██████╗ ███╗   ███╗██╗███╗   ██╗
+    ██║     ╚██╗██╔╝██╔══██╗     ██╔══██╗██╔══██╗████╗ ████║██║████╗  ██║
+    ██║      ╚███╔╝ ██████╔╝     ███████║██║  ██║██╔████╔██║██║██╔██╗ ██║
+    ██║      ██╔██╗ ██╔══██╗     ██╔══██║██║  ██║██║╚██╔╝██║██║██║╚██╗██║
+    ███████╗██╔╝ ██╗██║  ██║     ██║  ██║██████╔╝██║ ╚═╝ ██║██║██║ ╚████║
+    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝     ╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝
+
+    🐺 LXR Admin Menu — Server-Side Logic
+
+    ═══════════════════════════════════════════════════════════════════════════════
+    SERVER INFORMATION
+    ═══════════════════════════════════════════════════════════════════════════════
+
+    Server:    The Land of Wolves 🐺
+    Developer: iBoss21 / The Lux Empire
+    Website:   https://www.wolves.land
+    Discord:   https://discord.gg/CrKcWdfd3A
+    Store:     https://theluxempire.tebex.io
+
+    ═══════════════════════════════════════════════════════════════════════════════
+
+    © 2026 iBoss21 / The Lux Empire | wolves.land | All Rights Reserved
+]]
+
 local frozen = false
 
-local permissions = {
-	['bring'] = 'admin',
-	['goto'] = 'admin',
-	['freeze'] = 'admin',
-	['spectate'] = 'admin',
-	['ban'] = 'admin',
-	['noclip'] = 'admin',
-	['kickall'] = 'admin',
-	['kick'] = 'admin',
-	['time'] = 'god',
-	['showcoords'] = 'admin',
-	['perms'] = 'god',
-}
+local permissions = Config.Permissions
 
 exports['lxr-core']:AddCommand('admin', 'Open the admin menu (Admin Only)', {}, false, function(source)
   	local src = source
