@@ -1,6 +1,31 @@
-local ShowingCoords, IsSpectating, LastSpectateCoord = false, false
+--[[
+    ██╗     ██╗  ██╗██████╗       █████╗ ██████╗ ███╗   ███╗██╗███╗   ██╗
+    ██║     ╚██╗██╔╝██╔══██╗     ██╔══██╗██╔══██╗████╗ ████║██║████╗  ██║
+    ██║      ╚███╔╝ ██████╔╝     ███████║██║  ██║██╔████╔██║██║██╔██╗ ██║
+    ██║      ██╔██╗ ██╔══██╗     ██╔══██║██║  ██║██║╚██╔╝██║██║██║╚██╗██║
+    ███████╗██╔╝ ██╗██║  ██║     ██║  ██║██████╔╝██║ ╚═╝ ██║██║██║ ╚████║
+    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝     ╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝
+
+    🐺 LXR Admin Menu — Client-Side Logic
+
+    ═══════════════════════════════════════════════════════════════════════════════
+    SERVER INFORMATION
+    ═══════════════════════════════════════════════════════════════════════════════
+
+    Server:    The Land of Wolves 🐺
+    Developer: iBoss21 / The Lux Empire
+    Website:   https://www.wolves.land
+    Discord:   https://discord.gg/CrKcWdfd3A
+    Store:     https://theluxempire.tebex.io
+
+    ═══════════════════════════════════════════════════════════════════════════════
+
+    © 2026 iBoss21 / The Lux Empire | wolves.land | All Rights Reserved
+]]
+
+local ShowingCoords, IsSpectating, LastSpectateCoord = false, false, nil
 local Invisible, Godmode, deleteLazer = false, false, false
-local menuLocation, menuSize = 'topright', 'size-125'
+local menuLocation, menuSize = Config.Menu and Config.Menu.location or 'topright', Config.Menu and Config.Menu.size or 'size-125'
 local kickreason, banreason = 'Unknown', 'Unknown'
 
 ----------------------------------------------------------------
